@@ -1,0 +1,18 @@
+services:
+  linux-guide:
+    image: docker-guide:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: linux-guide
+    ports:
+      - "3006:80"
+    restart: "no"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - guide-network
+
+networks:
+  guide-network:
+    driver: bridge
