@@ -1,10 +1,10 @@
 services:
-  linux-guide:
-    image: docker-guide:latest
+  linux-command:
+    image: docker-command:latest
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: linux-guide
+    container_name: linux-command
     ports:
       - "3006:80"
     restart: "no"
